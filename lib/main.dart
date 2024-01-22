@@ -10,7 +10,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'features/Drawer/Configure/data/models/appsetting.dart';
 import 'features/Drawer/Configure/presentation/view_model/app_setting_provider.dart';
 import 'features/Home/data/models/work.dart';
-import 'features/Home/presentation/view/home_screen.dart';
+import 'features/Home/home.dart';
 import 'features/Home/presentation/view_model/work_data_provider.dart';
 
 void main() async {
@@ -65,7 +65,7 @@ class MyApp extends ConsumerWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomeScreen(),
+      home: const Home(),
     );
   }
 }

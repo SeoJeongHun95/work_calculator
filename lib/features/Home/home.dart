@@ -1,3 +1,4 @@
+import 'package:calander/features/Home/presentation/view/home_screen.dart';
 import 'package:flutter/cupertino.dart';
 
 class Home extends StatelessWidget {
@@ -7,6 +8,6 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return const HomeScreen();
   }
 }

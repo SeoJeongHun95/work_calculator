@@ -1,8 +1,10 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:calander/features/Drawer/WorkGraph/work_graph.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_holo_date_picker/flutter_holo_date_picker.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:gap/gap.dart';
 import 'package:money_formatter/money_formatter.dart';
 import 'package:table_calendar/table_calendar.dart';
 
@@ -260,10 +262,42 @@ class _HomeScreenState extends ConsumerState<HomeScreen> {
                 ),
               ),
               const Divider(),
-              const SizedBox(
-                height: 50,
-                width: double.infinity,
-                // color: Colors.yellowAccent,
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        ElevatedButton(
+                          style: ElevatedButton.styleFrom(
+                            fixedSize: const Size(64, 64),
+                            padding: EdgeInsets.zero,
+                            backgroundColor:
+                                Theme.of(context).colorScheme.primaryContainer,
+                            shape: const RoundedRectangleBorder(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(16),
+                              ),
+                            ),
+                          ),
+                          onPressed: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => const WorkGraph(),
+                              ),
+                            );
+                          },
+                          child: const Icon(
+                            Icons.auto_graph_rounded,
+                            size: 32,
+                          ),
+                        ),
+                        const Gap(8),
+                        const Text("급여내역")
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ],
           ),
